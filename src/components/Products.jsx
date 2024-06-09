@@ -11,7 +11,7 @@ import Swal from 'sweetalert2'
 import Spinner from 'react-bootstrap/Spinner';
 import { url } from '../Utilities/urlAPI';
 
-function Products({prodData}) {
+function Products() {
 
 
     const [saving, setSaving] = useState(false);
@@ -124,7 +124,8 @@ function Products({prodData}) {
             title: 'Buying Complete',
             text: 'Thank you for your support.',
             icon: 'success',
-            confirmButtonText: 'Ok Thank'
+            confirmButtonText: 'Ok Thank',
+            showCloseButton: true
           })
           .then((value) => {
             location.reload();
@@ -148,7 +149,9 @@ function Products({prodData}) {
       title: 'Please confirm!',
       text: 'Do you want to buy this ?',
       icon: 'question',
-      confirmButtonText: 'Confirm to buy'
+      confirmButtonText: 'Confirm to buy',
+      showCancelButton: true,
+      showCloseButton: true
     }
   )
   .then((result) => {
